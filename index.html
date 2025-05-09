@@ -24,7 +24,7 @@
     form.onsubmit = async (e) => {
       e.preventDefault();
       const data = new FormData(form);
-      const response = await fetch('https://ton-backend.onrender.com/upload', {
+      const response = await fetch('https://adoptmehousehub.netlify.app/', {
         method: 'POST',
         body: data
       });
@@ -35,7 +35,7 @@
     };
 
     async function loadHouses() {
-      const res = await fetch('https://ton-backend.onrender.com/houses');
+      const res = await fetch('https://adoptmehousehub.netlify.app/');
       const houses = await res.json();
       const container = document.getElementById('houses');
       container.innerHTML = '';
